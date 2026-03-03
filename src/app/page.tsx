@@ -1,7 +1,8 @@
-export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <div>oke</div>
-    </div>
-  );
-}
+import Home from "@/containers";
+import { IBaseParams, IGetParams } from "@/interfaces/IBaseParams";
+
+type HomePageProps = IGetParams<IBaseParams>;
+const HomePage = ({ searchParams }: HomePageProps) => {
+  return <Home />;
+};
+export default HomePage;
